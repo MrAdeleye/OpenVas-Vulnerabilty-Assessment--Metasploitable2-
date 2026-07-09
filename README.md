@@ -4,7 +4,7 @@
 
 
 <h2>Description</h2>
-This project documents a vulnerability assessment conducted against a Metasploitable 2 virtual machine within an isolated lab environment using OpenVAS and Nmap. The objective was to identify exposed services, validate discovered vulnerabilities, assess risk based on severity and exploitability, and develop practical remediation recommendations following industry standard vulnerability management practices.
+This project documents a vulnerability assessment conducted against a Metasploitable 2 virtual machine within an isolated lab environment using OpenVAS . The objective was to identify exposed services, validate discovered vulnerabilities, assess risk based on severity and exploitability, and develop practical remediation recommendations following industry standard vulnerability management practices.
 
 
 <br />
@@ -34,15 +34,26 @@ The primary goal of this lab was to understand :
 
 
 
- <h2> Outcome of Actions and Lessons Learned </h2> 
+ <h2> Outcome of Actions  </h2> 
 
-- <b>The target password was successfully cracked within seconds
- 
-- <b>Demonstrated high vulnerability of weak passwords against precompiled wordlists
- 
-- <b>Reinforced the effectiveness of offline attacks where no network detection is involved
+- <b>This vulnerability assessment successfully identified multiple security weaknesses across the Metasploitable 2 virtual machine using OpenVAS, with findings validated through service enumeration using Nmap where appropriate. The assessment uncovered vulnerabilities ranging from critical remote code execution flaws and insecure default configurations to authentication weaknesses and outdated cryptographic protocols.
 
-This project significantly made me realize :
+- <b>To provide a realistic representation of a professional vulnerability management process, findings were prioritized according to severity, exploitability, and potential business impact rather than documenting every detected vulnerability. This approach enabled the development of targeted remediation recommendations for the most significant risks while demonstrating the importance of risk-based prioritization over vulnerability volume.
+
+---Overall, the project reinforced the value of combining automated vulnerability scanning with manual validation to produce accurate, actionable security findings.
+
+<h2> Lessons Learned </h2>
+- <b>Vulnerability scanners significantly accelerate the discovery process but should not be relied upon without validation, as false positives and duplicate findings may occur.
+ 
+- <b>Effective vulnerability management extends beyond identifying weaknesses; it requires understanding the associated business risk, validating findings, and prioritizing remediation efforts.
+
+- <b>Outdated software and insecure default configurations remain among the most common causes of critical security exposures
+
+- <b>Cross-validating OpenVAS findings with Nmap improved confidence in detected services and demonstrated the importance of using multiple tools during an assessment
+
+- <b>documentation is an essential component of vulnerability management, enabling technical findings to be communicated clearly to both technical teams and management
+
+  This project significantly made me realize :
 
 - <b>Weak passwords are highly vulnerable to dictionary based attacks
 - <b>Offline attacks bypass traditional networkbased security monitoring
