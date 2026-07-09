@@ -1,1 +1,89 @@
+Finding :VSFTPD 2.3.4 Backdoor
 
+Severity
+Critical
+CVSS
+10.0 (Remote Code Execution)
+
+Affected Service
+Service: FTP
+Port: 21/TCP
+Software: VSFTPD 2.3.4
+
+Description
+OpenVAS identified the FTP service running VSFTPD 2.3.4, a version known to contain a malicious backdoor introduced into an official release. 
+Under specific conditions, the backdoor can open a remote shell, allowing an attacker to execute commands on the target system without valid credentials.
+
+Business Impact
+Successful exploitation could result in complete system compromise, enabling an attacker to execute arbitrary commands, establish persistence, 
+and pivot to other systems within the network. If exposed externally, this service presents a significant risk due to the availability of public exploit code.
+
+Validation
+Service enumeration using Nmap confirmed the vulnerable version of VSFTPD running on TCP port 21, validating the OpenVAS finding.
+
+nmap -sV -p21 <Target-IP>
+
+Recommendation
+Upgrade to a supported version of VSFTPD.
+Disable FTP if it is not required.
+Replace FTP with secure alternatives such as SFTP.
+Restrict access to trusted hosts using firewall rules.
+Monitor authentication logs for suspicious activity.
+
+
+Finding 2: Apache Tomcat 'Ghostcat' (AJP) Remote Code Execution
+
+Severity
+Critical
+CVSS
+9.8
+
+Affected Service
+Service: Apache Tomcat
+Port: 8009/TCP
+
+Description
+OpenVAS identified the Apache Tomcat AJP connector as vulnerable to Ghostcat (CVE-2020-1938), a critical vulnerability that allows an unauthenticated attacker to interact with the Apache JServ Protocol (AJP) service. 
+If the AJP connector is exposed and improperly configured, an attacker may read sensitive files from the server or achieve remote code execution under certain deployment conditions.
+
+Business Impact
+Exploitation of the Ghostcat vulnerability could expose sensitive application files, configuration data, and credentials. 
+In environments where specific prerequisites are met, an attacker may escalate the attack to remote code execution, potentially leading to complete compromise of the web server and the applications it hosts.
+Such access could facilitate data theft, unauthorized system modifications, and lateral movement within the network.
+
+Recommendation
+Upgrade Apache Tomcat to the latest supported release.
+Remove or secure default management applications.
+Restrict access to administrative interfaces.
+Disable unnecessary services and connectors.
+Regularly patch and monitor the application server.
+
+Finding 3: TWiki < 4.2.4 Multiple XSS / Command Execution Vulnerabilities
+
+Severity
+Critical
+CVSS
+9.8
+
+Affected Service
+Service: HTTP
+Application: TWiki
+Version: Earlier than 4.2.4
+
+Description
+OpenVAS detected a vulnerable version of TWiki affected by multiple Cross-Site Scripting (XSS) and Command Execution vulnerabilities.
+These flaws could allow attackers to inject malicious scripts into web pages or execute arbitrary commands on the underlying server if successfully exploited.
+
+Business Impact
+A successful Cross-Site Scripting attack could compromise user sessions, steal authentication cookies, or manipulate web content. 
+The command execution vulnerability poses a significantly greater risk, potentially allowing complete control of the affected server,
+resulting in unauthorized access, data compromise, and service disruption.
+
+
+
+Recommendation
+Upgrade TWiki to version 4.2.4 or later.
+Remove unsupported web applications from production environments.
+Apply vendor security patches.
+Implement input validation and output encoding to reduce XSS risks.
+Restrict administrative interfaces and monitor web server logs for suspicious activity.
