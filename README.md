@@ -55,11 +55,8 @@ The primary goal of this lab was to understand :
 
   This project significantly made me realize :
 
-- <b>Weak passwords are highly vulnerable to dictionary based attacks
-- <b>Offline attacks bypass traditional networkbased security monitoring
-- <b>MFA significantly reduces risk even if credentials are compromised
-- <b>Hashing algorithms must eb secured with "salting' 
-- <b>The need for password policies and complexity 
+-that vulnerability management is an ongoing process rather than a one-time scan. Identifying vulnerabilities is only the first step; validating findings, assessing risk, implementing remediation, and continuously reassessing systems are equally critical to maintaining a strong security posture.
+
    
 <h2>Environments & Tools Used </h2>
 - <b> Kali Linux </b>
@@ -71,22 +68,17 @@ The primary goal of this lab was to understand :
 <h2>Program walk-through:</h2>
 
 <p align="center">
-Installed 'John the Ripper" and created a sub-user on my linux vmware   <br/>
-<img src="https://i.imgur.com/rmWRJki.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Installed OpenVas and ran Full scan on Metasploitable 2  <br/>
+<img src="https://i.imgur.com/lFncVFj.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 
  
  <p align="center">
- Identified and extracted hashed password entry associated with the created user from /etc/shadow directory
+ Vulnerabilty Scan result 
    <br/>
-<img src="https://i.imgur.com/j7Pa4Aa.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/Jupeaaa.png"' height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 
- <p align="center">
- Used it as a dictionary input for offline password cracking attempts & Monitored cracking in real time 
-   <br/>
-<img src="https://i.imgur.com/s5eiXDp.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
+
