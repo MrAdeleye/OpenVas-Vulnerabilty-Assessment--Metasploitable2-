@@ -4,7 +4,7 @@
 
 
 <h2>Description</h2>
-This project documents a vulnerability assessment conducted against a Metasploitable 2 virtual machine within an isolated lab environment using OpenVAS and Nmap. The objective was to identify exposed services, validate discovered vulnerabilities, assess risk based on severity and exploitability, and develop practical remediation recommendations following industry-standard vulnerability management practices.
+This project documents a vulnerability assessment conducted against a Metasploitable 2 virtual machine within an isolated lab environment using OpenVAS and Nmap. The objective was to identify exposed services, validate discovered vulnerabilities, assess risk based on severity and exploitability, and develop practical remediation recommendations following industry standard vulnerability management practices.
 
 
 <br />
@@ -22,16 +22,14 @@ The primary goal of this lab was to understand :
 
 <h2> Actions Performed </h2>
  
-- <b>Created a sub-user account on a Linux virtual machine (VMware environment)
-- <b>avoided initial password complexity while setting up account 
-- <b>Ensured controlled and isolated testing conditions in lab environment set up 
-- <b>Accessed the /etc/shadow file ( This step demonstrated Linux secures password storage mechanism using hashed              credentials rather than plaintext)
-- <b>Identified and extracted hashed password entries associated with the created user
-- <b>Located and decompressed the rockyou.txt wordlist
-- <b>Used it as a dictionary input for offline password cracking attempts
-- <b>Initiated John the Ripper against the extracted hash file
-- <b>Executed dictionary-based attack using the RockYou wordlist
-- <b>Monitored cracking progress in real time
+- <b>Verified network connectivity.
+- <b>Performed service enumeration with Nmap. 
+- <b>Created and configured OpenVAS as alongside its  scan target.
+- <b>Executed a Full and Fast scan.
+- <b>Reviewed vulnerability findings.
+- <b>Prioritized vulnerabilities by severity and exploitability.
+- <b>Developed remediation recommendations.
+- <b>Validated findings against exposed services.
   
 
 
