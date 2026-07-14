@@ -119,3 +119,138 @@ Restrict access to administrative interfaces using firewall rules or access cont
 Implement routine vulnerability scanning and patch management to identify and remediate outdated software.
 
 
+Finding: RSH Unencrypted Cleartext Login
+Severity
+High
+
+CVSS
+7.5
+
+Affected Service
+Service: Remote Shell (RSH)
+Port: 514/TCP
+
+Description
+OpenVAS identified that the target system is running the Remote Shell (RSH) service,
+an obsolete remote administration protocol that transmits authentication credentials and session data in cleartext. 
+Because RSH does not provide encryption or strong authentication mechanisms, any data exchanged between the client and server can be intercepted by an attacker with access to the network.
+
+Business Impact
+The use of unencrypted remote administration services exposes organizations to credential theft, session hijacking, and unauthorized access.
+An attacker monitoring network traffic could capture usernames and commands transmitted over the connection, potentially compromising sensitive systems and facilitating lateral movement across the network.
+
+Validation
+The OpenVAS finding was validated through service enumeration using Nmap, which confirmed that the RSH service was listening on TCP port 514.
+nmap -sV -p514 <Target-IP>
+The detected service version aligned with the OpenVAS assessment, confirming that the host was exposing an insecure remote administration service.
+
+Recommendation
+Disable the RSH service if it is no longer required.
+Replace RSH with SSH, which provides encrypted authentication and secure remote administration.
+Restrict remote administrative access using firewall rules and network segmentation.
+Enforce the use of strong authentication mechanisms, including public key authentication where appropriate.
+Regularly review legacy services and remove protocols that no longer meet modern security standards.
+
+
+Finding: TWiki Cross-Site Request Forgery (CSRF) Vulnerability
+Severity
+Medium
+
+CVSS
+6.8
+
+Affected Service
+Service: HTTP
+Port: 80/TCP
+Application: TWiki
+
+Description
+OpenVAS identified the deployed TWiki application as vulnerable to a Cross-Site Request Forgery (CSRF) vulnerability.
+This flaw allows an attacker to craft malicious requests that, when executed by an authenticated user, perform unauthorized actions on the application without the user's knowledge or consent. 
+The vulnerability exists due to insufficient validation of the origin and authenticity of user requests.
+
+Business Impact
+If successfully exploited, a CSRF attack could allow an attacker to perform unauthorized actions using a legitimate user's privileges, including modifying application content,
+changing account settings, or creating administrative users, depending on the permissions of the affected account. 
+In environments where administrative users are targeted, exploitation could result in unauthorized system changes and compromise the integrity of the web application.
+
+Validation
+The vulnerability was identified through OpenVAS active checks against the TWiki web application. 
+Service enumeration using Nmap confirmed the presence of the web service hosting the vulnerable application.
+nmap -sV -p80 <Target-IP>
+Manual verification through a web browser confirmed that the TWiki application was accessible, supporting the scanner's findings.
+
+Recommendation
+Upgrade TWiki to a version that addresses the CSRF vulnerability.
+Implement anti-CSRF tokens for all state-changing requests.
+Validate the Origin and Referer headers where appropriate.
+Configure session cookies with the SameSite attribute to reduce CSRF risk.
+Educate users to avoid interacting with untrusted links while authenticated to sensitive applications.
+
+
+Finding: Weak Host Key Algorithm(s) (SSH)
+Severity
+Medium
+
+CVSS
+5.3
+
+Affected Service
+Service: Secure Shell (SSH)
+Port: 22/TCP
+
+Description
+OpenVAS identified that the SSH service supports one or more weak cryptographic host key algorithms that no longer meet current security best practices.
+Weak or deprecated host key algorithms provide a lower level of cryptographic assurance and may be susceptible to advances in cryptanalysis,
+reducing the overall security of remote administrative sessions.
+
+Business Impact
+Although this vulnerability does not directly allow unauthorized access, the continued use of weak cryptographic algorithms increases the risk of attackers compromising the integrity of SSH communications.
+In environments with highly capable adversaries, deprecated algorithms may weaken the trust relationship between SSH clients and servers, 
+potentially facilitating man-in-the-middle attacks or undermining the long-term confidentiality of administrative connections.
+
+Validation
+The OpenVAS finding was validated through service enumeration, which confirmed that the target was running an SSH service on TCP port 22. 
+The vulnerability was identified by reviewing the host key algorithms supported by the SSH server during the connection handshake.
+nmap -sV -p22 <Target-IP>
+
+Recommendation
+Remove support for deprecated or weak SSH host key algorithms.
+Configure the SSH server to use modern cryptographic algorithms such as Ed25519 or RSA (3072-bit or higher).
+Disable legacy algorithms that are no longer recommended by current security standards.
+Regularly update the OpenSSH server to ensure support for current cryptographic best practices.
+Periodically review cryptographic configurations as part of routine system hardening.
+Analyst Observation
+
+
+
+Finding: TCP Timestamps Information Disclosure
+Severity
+Low
+
+CVSS
+2.6
+
+Affected Service
+Service: TCP/IP Stack
+Affected Ports: Multiple
+
+Description
+OpenVAS identified that the target system has TCP timestamps enabled, allowing it to disclose timing information during TCP communications. While TCP timestamps are commonly used to improve network performance and calculate round-trip times, 
+they may inadvertently reveal information about the system's uptime and internal clock, providing attackers with additional reconnaissance data.
+
+Business Impact
+Although this vulnerability does not directly enable system compromise, the disclosed timing information can assist attackers during the reconnaissance phase of an attack. 
+System uptime and timestamp values may be used to fingerprint operating systems, estimate reboot schedules, or support more advanced attack techniques by providing additional intelligence about the target environment.
+
+Validation
+The vulnerability was identified through OpenVAS network analysis and confirmed by observing TCP timestamp values returned by the target during the TCP handshake. 
+The affected behavior was present across multiple network services exposed by the host.
+nmap -O <Target-IP>
+The scan confirmed the target's TCP/IP stack characteristics, supporting the OpenVAS assessment.
+
+Recommendation
+Disable TCP timestamps where operationally feasible, particularly on internet-facing systems.
+Review operating system network stack configurations to minimize unnecessary information disclosure.
+Implement network hardening measures that reduce host fingerprinting opportunities.
+Regularly assess exposed services to identify configuration weaknesses that may aid reconnaissance activities.
