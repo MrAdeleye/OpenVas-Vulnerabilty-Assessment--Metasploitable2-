@@ -24,7 +24,7 @@ The primary goal of this lab was to understand :
  
 - <b>Verified network connectivity.
 - <b>Performed service enumeration with Nmap. 
-- <b>Created and configured OpenVAS as alongside its  scan target.
+- <b>Created and configured OpenVAS  alongside its  scan target.
 - <b>Executed a Full and Fast scan.
 - <b>Reviewed vulnerability findings.
 - <b>Prioritized vulnerabilities by severity and exploitability.
