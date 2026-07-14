@@ -98,14 +98,14 @@ Installed OpenVas and ran Full scan on Metasploitable 2  <br/>
 <br />
 
  <p align="center">
- Vulnerabilty Scan result for TWiki < 4.2.4 Multiple XSS / Command Execution Vulnerabilities
+ Scan result for TWiki < 4.2.4 Multiple XSS / Command Execution Vulnerabilities
    <br/>
 <img src="https://i.imgur.com/69Glhmg.png' height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 
 <p align="center">
- Vulnerabilty Scan result for EasyPHP Web Server ≤ 12.1 Multiple Vulnerabilities
+  Scan result for EasyPHP Web Server ≤ 12.1 Multiple Vulnerabilities
    <br/>
 <img src="https://i.imgur.com/iuaECi7.png' height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
@@ -121,7 +121,7 @@ Installed OpenVas and ran Full scan on Metasploitable 2  <br/>
 
 
 <p align="center">
- Vulnerabilty Scan result for TWiki Cross-Site Request Forgery (CSRF) Vulnerability
+  Scan result for TWiki Cross-Site Request Forgery (CSRF) Vulnerability
    <br/>
 <img src="https://i.imgur.com/6gpsr2z.png' height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
@@ -129,10 +129,18 @@ Installed OpenVas and ran Full scan on Metasploitable 2  <br/>
 
 
 <p align="center">
- Vulnerabilty Scan result for TWiki Cross-Site Request Forgery (CSRF) Vulnerability
+ Vulnerabilty Scan result for Weak Host Key Algorithm(s) (SSH)
    <br/>
-<img src="https://i.imgur.com/6gpsr2z.png' height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/ZmVDoo0.png' height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 
+
+
+<p align="center">
+ Vulnerabilty Scan result for TCP Timestamps Information Disclosure
+   <br/>
+<img src="https://i.imgur.com/nlx0ROD.png' height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
 
