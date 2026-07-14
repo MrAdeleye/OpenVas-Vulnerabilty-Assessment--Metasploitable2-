@@ -82,3 +82,9 @@ Installed OpenVas and ran Full scan on Metasploitable 2  <br/>
 <br />
 
 
+ <p align="center">
+ Vulnerabilty Scan result 
+   <br/>
+<img src="https://i.imgur.com/Jupeaaa.png"' height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
