@@ -32,7 +32,6 @@ Monitor authentication logs for suspicious activity.
 
 
 Finding 2: Apache Tomcat 'Ghostcat' (AJP) Remote Code Execution
-
 Severity
 Critical
 CVSS
@@ -60,7 +59,6 @@ Regularly patch and monitor the application server.
 
 
 Finding 3: TWiki < 4.2.4 Multiple XSS / Command Execution Vulnerabilities
-
 Severity
 Critical
 CVSS
@@ -92,7 +90,6 @@ Restrict administrative interfaces and monitor web server logs for suspicious ac
 Finding: EasyPHP Web Server ≤ 12.1 Multiple Vulnerabilities
 Severity
 High
-
 CVSS
 7.5
 
@@ -122,7 +119,6 @@ Implement routine vulnerability scanning and patch management to identify and re
 Finding: RSH Unencrypted Cleartext Login
 Severity
 High
-
 CVSS
 7.5
 
@@ -155,7 +151,6 @@ Regularly review legacy services and remove protocols that no longer meet modern
 Finding: TWiki Cross-Site Request Forgery (CSRF) Vulnerability
 Severity
 Medium
-
 CVSS
 6.8
 
@@ -191,7 +186,6 @@ Educate users to avoid interacting with untrusted links while authenticated to s
 Finding: Weak Host Key Algorithm(s) (SSH)
 Severity
 Medium
-
 CVSS
 5.3
 
@@ -227,7 +221,6 @@ Analyst Observation
 Finding: TCP Timestamps Information Disclosure
 Severity
 Low
-
 CVSS
 2.6
 
