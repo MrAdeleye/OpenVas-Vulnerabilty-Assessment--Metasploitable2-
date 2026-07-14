@@ -74,13 +74,6 @@ Installed OpenVas and ran Full scan on Metasploitable 2  <br/>
 <br />
 
  
- <p align="center">
- Vulnerabilty Scan result 
-   <br/>
-<img src="https://i.imgur.com/Jupeaaa.png"' height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-
 
  <p align="center">
  Vulnerabilty Scan result 
@@ -88,3 +81,34 @@ Installed OpenVas and ran Full scan on Metasploitable 2  <br/>
 <img src="https://i.imgur.com/Jupeaaa.png"' height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
+
+ <p align="center">
+ Vulnerabilty Scan result for VSFTPD 2.3.4 Compromised Source Package Backdoor
+   <br/>
+<img src="https://i.imgur.com/CBmfE6t.png' height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+
+
+ <p align="center">
+ Vulnerabilty Scan result for Apache Tomcat 'Ghostcat' (AJP) Remote Code Execution
+   <br/>
+<img src="https://i.imgur.com/8brR5jU.png' height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+
+ <p align="center">
+ Vulnerabilty Scan result for TWiki < 4.2.4 Multiple XSS / Command Execution Vulnerabilities
+   <br/>
+<img src="https://i.imgur.com/69Glhmg.png' height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+
+<p align="center">
+ Vulnerabilty Scan result for TWiki < 4.2.4 Multiple XSS / Command Execution Vulnerabilities
+   <br/>
+<img src="https://i.imgur.com/69Glhmg.png' height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+
+
