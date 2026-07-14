@@ -87,7 +87,7 @@ Restrict administrative interfaces and monitor web server logs for suspicious ac
 
 
 
-Finding: EasyPHP Web Server ≤ 12.1 Multiple Vulnerabilities
+Finding 4: EasyPHP Web Server ≤ 12.1 Multiple Vulnerabilities
 Severity
 High
 CVSS
@@ -116,7 +116,7 @@ Restrict access to administrative interfaces using firewall rules or access cont
 Implement routine vulnerability scanning and patch management to identify and remediate outdated software.
 
 
-Finding: RSH Unencrypted Cleartext Login
+Finding 5 : RSH Unencrypted Cleartext Login
 Severity
 High
 CVSS
@@ -148,7 +148,7 @@ Enforce the use of strong authentication mechanisms, including public key authen
 Regularly review legacy services and remove protocols that no longer meet modern security standards.
 
 
-Finding: TWiki Cross-Site Request Forgery (CSRF) Vulnerability
+Finding 6 : TWiki Cross-Site Request Forgery (CSRF) Vulnerability
 Severity
 Medium
 CVSS
@@ -183,7 +183,7 @@ Configure session cookies with the SameSite attribute to reduce CSRF risk.
 Educate users to avoid interacting with untrusted links while authenticated to sensitive applications.
 
 
-Finding: Weak Host Key Algorithm(s) (SSH)
+Finding 7 : Weak Host Key Algorithm(s) (SSH)
 Severity
 Medium
 CVSS
@@ -218,7 +218,7 @@ Analyst Observation
 
 
 
-Finding: TCP Timestamps Information Disclosure
+Finding 8: TCP Timestamps Information Disclosure
 Severity
 Low
 CVSS
