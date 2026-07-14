@@ -247,3 +247,5 @@ Disable TCP timestamps where operationally feasible, particularly on internet-fa
 Review operating system network stack configurations to minimize unnecessary information disclosure.
 Implement network hardening measures that reduce host fingerprinting opportunities.
 Regularly assess exposed services to identify configuration weaknesses that may aid reconnaissance activities.
+
+*While low-risk findings such as TCP timestamp disclosure are unlikely to result in immediate compromise, they were still identified and documented as part of a comprehensive vulnerability management process
