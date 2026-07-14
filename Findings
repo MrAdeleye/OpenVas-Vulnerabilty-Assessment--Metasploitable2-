@@ -3,7 +3,7 @@ Finding :VSFTPD 2.3.4 Backdoor
 Severity
 Critical
 CVSS
-10.0 (Remote Code Execution)
+9.8 (Remote Code Execution)
 
 Affected Service
 Service: FTP
@@ -58,6 +58,7 @@ Restrict access to administrative interfaces.
 Disable unnecessary services and connectors.
 Regularly patch and monitor the application server.
 
+
 Finding 3: TWiki < 4.2.4 Multiple XSS / Command Execution Vulnerabilities
 
 Severity
@@ -79,11 +80,42 @@ A successful Cross-Site Scripting attack could compromise user sessions, steal a
 The command execution vulnerability poses a significantly greater risk, potentially allowing complete control of the affected server,
 resulting in unauthorized access, data compromise, and service disruption.
 
-
-
 Recommendation
 Upgrade TWiki to version 4.2.4 or later.
 Remove unsupported web applications from production environments.
 Apply vendor security patches.
 Implement input validation and output encoding to reduce XSS risks.
 Restrict administrative interfaces and monitor web server logs for suspicious activity.
+
+
+
+Finding: EasyPHP Web Server ≤ 12.1 Multiple Vulnerabilities
+Severity
+High
+
+CVSS
+7.5
+
+Affected Service
+Service: HTTP
+Port: 80/TCP
+Application: EasyPHP Web Server
+Version: 12.1 or earlier
+
+Description
+OpenVAS identified the target as running EasyPHP Web Server version 12.1 or earlier, which is affected by multiple publicly disclosed vulnerabilities. 
+These vulnerabilities may expose the web server to attacks such as information disclosure, directory traversal, authentication bypass, or remote code execution, 
+depending on the specific components and configuration in use. Running unsupported and outdated web server software significantly increases the attack surface and the likelihood of successful exploitation.
+
+Business Impact
+An attacker exploiting these vulnerabilities could gain unauthorized access to sensitive application files, compromise hosted web applications, or execute malicious code on the affected server.
+If exploited successfully, these weaknesses may lead to data breaches, service disruption, privilege escalation, or complete compromise of the web server, providing an entry point for further attacks within the environment.
+
+Recommendation
+Upgrade EasyPHP to a supported version or migrate to a modern, actively maintained web server platform.
+Apply all vendor security updates and patches.
+Remove or disable unnecessary services, sample applications, and default configurations.
+Restrict access to administrative interfaces using firewall rules or access control lists.
+Implement routine vulnerability scanning and patch management to identify and remediate outdated software.
+
+
